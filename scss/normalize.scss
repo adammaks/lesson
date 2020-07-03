@@ -1,0 +1,20 @@
+//Обнуление
+*{padding: 0px; margin: 0px;}
+
+//Шрифты
+@font-face {
+    font-family: "logo";
+    src: url('/fonts/logo.ttf');
+}
+@font-face {
+    font-family: "url";
+    src: url('/fonts/url.ttf');
+}
+@font-face {
+    font-family: "text";
+    src: url('/fonts/text.ttf');
+}
+@font-face {
+    font-family: "text2";
+    src: url('/fonts/text2.ttf');
+}
