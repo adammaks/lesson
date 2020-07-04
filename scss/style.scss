@@ -65,7 +65,7 @@ body{
                 }
         .header_link{
             font-family: url;
-            font-size: 20px;
+            font-size: 1em;
             text-decoration: none;
             text-transform: uppercase;
             color: #fff;
@@ -75,8 +75,13 @@ body{
             align-self: start;
             &:hover{
                 background-color: #fff;
-                color: #000;
+                color: #ddd;
                 border: 3px solid #fff;
+            }
+        }
+        @media (max-width: 850px) {
+            .header_link{
+                padding: 10px
             }
         }
         .header_scroll{
@@ -117,42 +122,70 @@ body{
     }
     .qoute{
         min-height: 70vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        justify-items: center;
-        align-items: center;
-        background: #fff;
+        background: url('/img/back_steve.jpg') no-repeat;
+        background-attachment: fixed;
+        background-position: right;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
         cursor: default;
-        .qoute_autor{
-            justify-self: center;
-            align-self: center;
-            font-family: text;
-            font-size: 25px;
-            text-transform: uppercase;
-            color: #333;
-            &:before{
-                margin-bottom: 30px;
-                margin-left: 50%;
-                content: "";
-                display: block;
-                max-width: 1.5px;
-                height: 70px;
-                background-color: #888;
+        position: relative;
+        overflow: hidden;
+        .qoute_overlay{
+            width: 100%;
+            min-height: 70vh;
+            background-color:  rgba(0, 0, 0, 0.45);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.8fr 1fr;
+            justify-items: center;
+            align-items: center;
+            .qoute_autor{
+                margin-bottom: 20px;
+                font-size: 25px;
+                text-transform: uppercase;
+                justify-self: center;
+                align-self: end;
+                font-family: text;
+                &:before{
+                    margin-bottom: 70px;
+                    margin-left: 50%;
+                    content: "";
+                    display: block;
+                    max-width: 1.5px;
+                    height: 80px;
+                    background-color: #ddd;
+                }
+            }
+            .qoute_autor_text{
+                align-self: start;
+                font-family: text2;
+                font-size: 1.8em;
             }
         }
-        .qoute_autor_text{
-            align-self: start;
-            font-family: text2;
-            font-size: 35px;
-            font-weight: 900;
-            color: #333;
+        @media (max-width: 850px) {
+            .qoute_overlay{
+                min-height: 100vh;
+            }
+            .qoute_autor_text{
+                width: 90%;
+            }
+        }
+    }
+    @media (max-width: 850px) {
+        .qoute{
+            min-height: 100vh;
         }
     }
     .portfolio{
         min-height: 100vh;
         font-family: text;
         background: url('/img/back2.jpg') no-repeat;
+        background-attachment: fixed;
         background-position: center;
         background-size: cover;
         color: $standartcolor;
@@ -183,7 +216,7 @@ body{
                 display: block;
                 height: 2px;
                 max-width: 340px;
-                background-color: rgba(242, 242, 242, 0.1);
+                background-color: #ccc;
                 text-align: center;
             }
         }
@@ -199,25 +232,50 @@ body{
             text-align: center;
             font-family: text2;
             display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 0.2fr 1fr;
             grid-gap: 5px;
+            align-items: start;
+            justify-items: center;
+            .portfolio_block_img1{
+                background: url('/img/icons/block1.png') no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-position: center;
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                align-self: center;
+            }
             .portfolio_block__name{
                 text-transform: uppercase;
                 font-size: 20px;
                 font-weight: 900;
-                align-self: center;
             }
             .portfolio_block__text{
                 line-height: 2;
                 font-size: 15px;
-                align-self: start;
+            }
+            .portfolio_block_img2{
+                background: url('/img/icons/block2.png') no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .portfolio_block_img3{
+                background: url('/img/icons/block3.png') no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .portfolio_block_img4{
+                background: url('/img/icons/block4.png') no-repeat;
+                background-position: center;
+                background-size: cover;
             }
         }
-        .portfolio_block2{}
-        .portfolio_block3{}
-        .portfolio_block4{}
         }
         @media (max-width: 850px) {
             .portfolio_block_container{
+            margin-top: 20px;
             padding: 10px;
             display: grid;
             grid-template-columns: 1fr;
@@ -226,6 +284,12 @@ body{
             }
             .portfolio_overlay{
                 grid-template-rows: 5fr 1fr;
+            }
+            .portfolio_block{
+                padding: 10px;
+            }
+            .portfolio_block_img1{
+                margin-bottom: 20px;
             }
         }
         }
