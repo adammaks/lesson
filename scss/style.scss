@@ -75,7 +75,7 @@ body{
             align-self: start;
             &:hover{
                 background-color: #fff;
-                color: #ddd;
+                color: #000;
                 border: 3px solid #fff;
             }
         }
@@ -93,8 +93,12 @@ body{
             position: absolute;
             right: 0px;
             transform: rotate(90deg);
+            transition: 0.5s;
             animation: header-text-scroll 1.2s infinite alternate;
             text-decoration: none;
+            &:hover{
+            color: #ccc;
+            }
             &:after{
                 content:" \2192";
             }
@@ -274,23 +278,19 @@ body{
         }
         }
         @media (max-width: 850px) {
-            .portfolio_block_container{
-            margin-top: 20px;
-            padding: 10px;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 2fr 2fr;
-            grid-gap: 5px;
+                .portfolio_block_container{
+                    padding: 10px;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    grid-gap: 5px;
+                }
+                .portfolio_block{
+                    padding: 10px;
+                }
+                .portfolio_block_img1{
+                    margin-bottom: 20px;
+                }
             }
-            .portfolio_overlay{
-                grid-template-rows: 5fr 1fr;
-            }
-            .portfolio_block{
-                padding: 10px;
-            }
-            .portfolio_block_img1{
-                margin-bottom: 20px;
-            }
-        }
         }
 }
