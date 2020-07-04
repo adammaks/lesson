@@ -131,7 +131,7 @@ body{
         background-position: right;
         background-size: cover;
         text-align: center;
-        color: #fff;
+        color: rgba(242, 242, 242, 0.8);
         cursor: default;
         position: relative;
         overflow: hidden;
@@ -151,6 +151,7 @@ body{
             .qoute_autor{
                 margin-bottom: 20px;
                 font-size: 25px;
+                color: #fff;
                 text-transform: uppercase;
                 justify-self: center;
                 align-self: end;
@@ -161,13 +162,14 @@ body{
                     content: "";
                     display: block;
                     max-width: 1.5px;
-                    height: 80px;
+                    height: 100px;
                     background-color: #ddd;
                 }
             }
             .qoute_autor_text{
+                width: 90%;
                 align-self: start;
-                font-family: text2;
+                font-family: text2_bold;
                 font-size: 1.8em;
             }
         }
@@ -259,6 +261,7 @@ body{
             .portfolio_block__text{
                 line-height: 2;
                 font-size: 15px;
+                color: rgba(242, 242, 242, 0.6);
             }
             .portfolio_block_img2{
                 background: url('/img/icons/block2.png') no-repeat;
@@ -293,4 +296,91 @@ body{
                 }
             }
         }
+    .about{
+        min-height: 50vh;
+        background: #111111;
+        color: #fff;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        .about_overlay{
+            width: 50%;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 2fr 0.5fr;
+            grid-gap: 15px;
+            justify-items: center;
+            align-items: center;
+            cursor: default;
+            .about_name{
+                font-family: text;
+                font-size: 40px;
+                align-self: end;
+            }
+            .about_text{
+                font-family: text2;
+                font-size: 20px;
+                align-self: start;
+                text-align: justify;
+                color: rgba(242, 242, 242, 0.6);
+                &:after{
+                    margin: 50px auto;
+                    display: block;
+                    content: "";
+                    max-width: 300px;
+                    height: 2px;
+                    background: #ccc;
+                }
+            }
+            .socmedia{
+                align-self: start;
+                .socmediaimg{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+        @media (max-width: 850px) {
+            .about{
+                padding: 50px 50px;
+                .about_overlay{
+                    width: 90%;
+                }
+            }
+        }
+    .footer{
+        padding: 20px;
+        background: #111;
+        color: rgba(242, 242, 242, 0.6);
+        font-family: text2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        .copy{
+            justify-self: end;
+            cursor: default;
+        }
+        .design{   
+            justify-self: start;
+            cursor: default;
+            &:before{
+                margin: 0px 10px;
+                display: inline-block;
+                content: "|";
+            }
+            a{
+                color: rgba(242, 242, 242, 0.6);
+                text-decoration: none;
+                &:hover{
+                    color: rgb(191, 143, 37);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
